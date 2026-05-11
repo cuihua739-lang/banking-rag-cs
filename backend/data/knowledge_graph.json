@@ -1,0 +1,249 @@
+{
+  "nodes": [
+    {
+      "id": "PROD_001",
+      "type": "Product",
+      "name": "信用卡",
+      "aliases": [
+        "信用卡"
+      ]
+    },
+    {
+      "id": "信用卡",
+      "type": "Alias",
+      "name": "信用卡",
+      "aliases": []
+    },
+    {
+      "id": "VAR_001",
+      "type": "ProductVariant",
+      "name": "金卡",
+      "aliases": [
+        "金卡"
+      ]
+    },
+    {
+      "id": "金卡",
+      "type": "Alias",
+      "name": "金卡",
+      "aliases": []
+    },
+    {
+      "id": "TERM_001",
+      "type": "Term",
+      "name": "年费",
+      "aliases": [
+        "年费"
+      ]
+    },
+    {
+      "id": "年费",
+      "type": "Alias",
+      "name": "年费",
+      "aliases": []
+    },
+    {
+      "id": "AMT_001",
+      "type": "Amount",
+      "name": "300元",
+      "aliases": [
+        "300元",
+        "三百元"
+      ]
+    },
+    {
+      "id": "300元",
+      "type": "Alias",
+      "name": "300元",
+      "aliases": []
+    },
+    {
+      "id": "三百元",
+      "type": "Alias",
+      "name": "三百元",
+      "aliases": []
+    },
+    {
+      "id": "FEAT_001",
+      "type": "Feature",
+      "name": "免年费",
+      "aliases": [
+        "免年费",
+        "免除年费"
+      ]
+    },
+    {
+      "id": "免年费",
+      "type": "Alias",
+      "name": "免年费",
+      "aliases": []
+    },
+    {
+      "id": "免除年费",
+      "type": "Alias",
+      "name": "免除年费",
+      "aliases": []
+    },
+    {
+      "id": "COND_001",
+      "type": "Condition",
+      "name": "刷满6次",
+      "aliases": [
+        "刷满6次",
+        "刷卡满6次",
+        "消费满6次"
+      ]
+    },
+    {
+      "id": "刷满6次",
+      "type": "Alias",
+      "name": "刷满6次",
+      "aliases": []
+    },
+    {
+      "id": "刷卡满6次",
+      "type": "Alias",
+      "name": "刷卡满6次",
+      "aliases": []
+    },
+    {
+      "id": "消费满6次",
+      "type": "Alias",
+      "name": "消费满6次",
+      "aliases": []
+    }
+  ],
+  "edges": [
+    {
+      "source": "PROD_001",
+      "target": "VAR_001",
+      "relation": "HAS_VARIANT"
+    },
+    {
+      "source": "信用卡",
+      "target": "PROD_001",
+      "relation": "ALIAS_OF"
+    },
+    {
+      "source": "VAR_001",
+      "target": "TERM_001",
+      "relation": "USES_TERM"
+    },
+    {
+      "source": "VAR_001",
+      "target": "FEAT_001",
+      "relation": "HAS_FEATURE"
+    },
+    {
+      "source": "金卡",
+      "target": "VAR_001",
+      "relation": "ALIAS_OF"
+    },
+    {
+      "source": "TERM_001",
+      "target": "AMT_001",
+      "relation": "RELATES_TO"
+    },
+    {
+      "source": "年费",
+      "target": "TERM_001",
+      "relation": "ALIAS_OF"
+    },
+    {
+      "source": "300元",
+      "target": "AMT_001",
+      "relation": "ALIAS_OF"
+    },
+    {
+      "source": "三百元",
+      "target": "AMT_001",
+      "relation": "ALIAS_OF"
+    },
+    {
+      "source": "FEAT_001",
+      "target": "COND_001",
+      "relation": "CONSTRAINED_BY"
+    },
+    {
+      "source": "免年费",
+      "target": "FEAT_001",
+      "relation": "ALIAS_OF"
+    },
+    {
+      "source": "免除年费",
+      "target": "FEAT_001",
+      "relation": "ALIAS_OF"
+    },
+    {
+      "source": "刷满6次",
+      "target": "COND_001",
+      "relation": "ALIAS_OF"
+    },
+    {
+      "source": "刷卡满6次",
+      "target": "COND_001",
+      "relation": "ALIAS_OF"
+    },
+    {
+      "source": "消费满6次",
+      "target": "COND_001",
+      "relation": "ALIAS_OF"
+    }
+  ],
+  "entity_to_chunks": {
+    "PROD_001": [
+      "6e3137f719224da8be2f332312ca68df",
+      "fca2e5969b9a41f5bde29aabd8be2c82",
+      "82f3d5cf41f546dfa29065513cd47458",
+      "1fe85525182141d1b9c5168319144322",
+      "202a907886b64e639bb8a5c4a4828300",
+      "03a159aa818c4eadbf19f9e744de55b7",
+      "7f21353275f24029b3445f778c37222e"
+    ],
+    "VAR_001": [
+      "6e3137f719224da8be2f332312ca68df",
+      "fca2e5969b9a41f5bde29aabd8be2c82",
+      "82f3d5cf41f546dfa29065513cd47458",
+      "1fe85525182141d1b9c5168319144322",
+      "202a907886b64e639bb8a5c4a4828300",
+      "03a159aa818c4eadbf19f9e744de55b7",
+      "7f21353275f24029b3445f778c37222e"
+    ],
+    "TERM_001": [
+      "6e3137f719224da8be2f332312ca68df",
+      "fca2e5969b9a41f5bde29aabd8be2c82",
+      "82f3d5cf41f546dfa29065513cd47458",
+      "1fe85525182141d1b9c5168319144322",
+      "202a907886b64e639bb8a5c4a4828300",
+      "03a159aa818c4eadbf19f9e744de55b7",
+      "7f21353275f24029b3445f778c37222e"
+    ],
+    "AMT_001": [
+      "6e3137f719224da8be2f332312ca68df",
+      "fca2e5969b9a41f5bde29aabd8be2c82",
+      "82f3d5cf41f546dfa29065513cd47458",
+      "1fe85525182141d1b9c5168319144322",
+      "202a907886b64e639bb8a5c4a4828300",
+      "03a159aa818c4eadbf19f9e744de55b7",
+      "7f21353275f24029b3445f778c37222e"
+    ],
+    "FEAT_001": [
+      "6e3137f719224da8be2f332312ca68df",
+      "fca2e5969b9a41f5bde29aabd8be2c82",
+      "82f3d5cf41f546dfa29065513cd47458",
+      "1fe85525182141d1b9c5168319144322",
+      "202a907886b64e639bb8a5c4a4828300",
+      "03a159aa818c4eadbf19f9e744de55b7",
+      "7f21353275f24029b3445f778c37222e"
+    ],
+    "COND_001": [
+      "6e3137f719224da8be2f332312ca68df",
+      "fca2e5969b9a41f5bde29aabd8be2c82",
+      "82f3d5cf41f546dfa29065513cd47458",
+      "1fe85525182141d1b9c5168319144322",
+      "202a907886b64e639bb8a5c4a4828300",
+      "03a159aa818c4eadbf19f9e744de55b7",
+      "7f21353275f24029b3445f778c37222e"
+    ]
+  }
+}

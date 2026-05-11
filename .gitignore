@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.sqlite3
+*.db
+.idea/
+.vscode/
+.env
+*.log
+.DS_Store
+Thumbs.db
+banking-rag-data/
+backend/data/chroma_db/
+backend/data/whoosh_index/
